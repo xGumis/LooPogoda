@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:gravity="center">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" android:gravity="center">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" app:srcCompat="@drawable/i10d"
+                    android:id="@+id/icon"
+                    android:layout_weight="1" android:layout_margin="5dp" tools:srcCompat="@drawable/i10d"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:textSize="18sp"
+                    android:textAlignment="center" android:id="@+id/desc"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:gravity="center">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/date"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:textSize="24sp"
+                    android:textAlignment="center"/>
+            <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                >
+                    <TextView
+                            android:text="@string/temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textAlignment="center"
+                            android:textSize="18sp" android:textStyle="bold" android:paddingStart="5dp"
+                            android:paddingEnd="5dp" android:visibility="invisible"/>
+                    <TextView
+                            android:text="@string/temp_max"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textAlignment="center"
+                            android:textStyle="bold" android:textSize="18sp" android:paddingEnd="5dp"
+                            android:paddingStart="5dp" android:visibility="invisible"/>
+                    <TextView
+                            android:text="@string/temp_min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:textAlignment="center"
+                            android:textSize="18sp" android:textStyle="bold" android:paddingEnd="5dp"
+                            android:paddingStart="5dp" android:visibility="invisible"/>
+                </TableRow>
+                <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:gravity="end">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/temp"
+                            android:textAlignment="center" android:textSize="18sp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/temp_max"
+                            android:textAlignment="center" android:textSize="18sp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/temp_min"
+                            android:textAlignment="center" android:textSize="18sp"/>
+                </TableRow>
+                <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:gravity="end">
+                    <TextView
+                            android:text="@string/pressure"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:textAlignment="textEnd"
+                            android:textSize="18sp" android:textStyle="bold" android:paddingLeft="5dp"
+                            android:paddingRight="5dp" android:visibility="invisible"/>
+                    <TextView
+                            android:text="@string/humidity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:textAlignment="textEnd"
+                            android:textSize="18sp"
+                            android:textStyle="bold" android:paddingLeft="5dp" android:paddingRight="5dp"
+                            android:visibility="invisible"/>
+                    <TextView
+                            android:text="@string/wind"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:textAlignment="textEnd"
+                            android:textSize="18sp"
+                            android:textStyle="bold" android:paddingLeft="5dp" android:paddingRight="5dp"
+                            android:visibility="invisible"/>
+                </TableRow>
+                <TableRow android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:gravity="start">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/pressure"
+                            android:textAlignment="center" android:textSize="18sp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/humidity"
+                            android:textAlignment="center" android:textSize="18sp"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/wind"
+                            android:textAlignment="center" android:textSize="18sp"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

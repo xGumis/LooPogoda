@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:gravity="center">
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                        android:text="@string/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/backButton" android:textStyle="bold"
+                        android:textAlignment="center" android:layout_gravity="start"
+                        android:layout_marginStart="10dp"/>
+                <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:elevation="4dp"
+                        android:padding="10dp"
+                        app:cardCornerRadius="10dp"
+                        android:id="@+id/cardView" app:contentPadding="10dp" android:layout_gravity="center">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/name"
+                                android:textSize="24sp"
+                                android:textAlignment="center"/>
+                </androidx.cardview.widget.CardView>
+        </FrameLayout>
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="10dp"
+                app:contentPadding="15dp" app:cardElevation="4dp" android:layout_margin="15dp">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:gravity="center">
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="200dp"
+                                        android:layout_height="match_parent" android:layout_weight="1"
+                                        android:gravity="center">
+                                        <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" app:srcCompat="@drawable/i10d"
+                                                android:layout_weight="1" android:layout_margin="5dp"
+                                                tools:srcCompat="@drawable/i10d" android:visibility="invisible"/>
+                                        <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content" android:id="@+id/desc"
+                                                android:layout_weight="1" android:textSize="18sp"
+                                                android:textAlignment="center"/>
+                                </LinearLayout>
+                                <LinearLayout android:layout_width="wrap_content"
+                                              android:layout_height="wrap_content" android:orientation="vertical"
+                                              android:gravity="center">
+                                        <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                                android:textSize="24sp"
+                                                android:textAlignment="center" android:visibility="invisible"/>
+                                        <TableLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                                <TableRow android:layout_width="match_parent"
+                                                          android:layout_height="match_parent"
+                                                >
+                                                        <TextView
+                                                                android:text="@string/temp"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="center"
+                                                                android:textSize="18sp" android:textStyle="bold"
+                                                                android:paddingStart="5dp"
+                                                                android:paddingEnd="5dp"/>
+                                                        <TextView
+                                                                android:text="@string/temp_max"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="center"
+                                                                android:textStyle="bold" android:textSize="18sp"
+                                                                android:paddingEnd="5dp"
+                                                                android:paddingStart="5dp"/>
+                                                        <TextView
+                                                                android:text="@string/temp_min"
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="center"
+                                                                android:textSize="18sp" android:textStyle="bold"
+                                                                android:paddingEnd="5dp"
+                                                                android:paddingStart="5dp"/>
+                                                </TableRow>
+                                                <TableRow android:layout_width="match_parent"
+                                                          android:layout_height="match_parent"
+                                                          android:gravity="end">
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="center" android:textSize="18sp"
+                                                                android:visibility="invisible"/>
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="center" android:textSize="18sp"
+                                                                android:visibility="invisible"/>
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="center" android:textSize="18sp"
+                                                                android:visibility="invisible"/>
+                                                </TableRow>
+                                                <TableRow android:layout_width="match_parent"
+                                                          android:layout_height="match_parent"
+                                                          android:gravity="end">
+                                                        <TextView
+                                                                android:text="@string/pressure"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="textEnd"
+                                                                android:textSize="18sp" android:textStyle="bold"
+                                                                android:paddingLeft="5dp"
+                                                                android:paddingRight="5dp"
+                                                                android:visibility="visible"/>
+                                                        <TextView
+                                                                android:text="@string/humidity"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="textEnd"
+                                                                android:textSize="18sp"
+                                                                android:textStyle="bold" android:paddingLeft="5dp"
+                                                                android:paddingRight="5dp"/>
+                                                        <TextView
+                                                                android:text="@string/wind"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="textEnd"
+                                                                android:textSize="18sp"
+                                                                android:textStyle="bold" android:paddingLeft="5dp"
+                                                                android:paddingRight="5dp"/>
+                                                </TableRow>
+                                                <TableRow android:layout_width="match_parent"
+                                                          android:layout_height="match_parent"
+                                                          android:gravity="start">
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="textStart"
+                                                                android:textSize="18sp" android:visibility="invisible"/>
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="textStart"
+                                                                android:textSize="18sp" android:visibility="invisible"/>
+                                                        <TextView
+                                                                android:layout_width="wrap_content"
+                                                                android:layout_height="wrap_content"
+                                                                android:textAlignment="textStart"
+                                                                android:textSize="18sp" android:visibility="invisible"/>
+                                                </TableRow>
+                                        </TableLayout>
+                                </LinearLayout>
+                        </LinearLayout>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/pager"
+                />
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" app:cardCornerRadius="10dp" app:contentPadding="5dp"
+                android:layout_marginBottom="5dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp">
+                <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/background_light"
+                        android:id="@+id/rvTabs"
+                >
+                </androidx.recyclerview.widget.RecyclerView>
+        </androidx.cardview.widget.CardView>
+</LinearLayout>
